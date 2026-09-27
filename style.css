@@ -1,0 +1,290 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #21092F;
+  background-color: white;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.cards {
+  position: relative;
+  height: 240px;
+  background-image: url("./images/bg-main-mobile.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-front {
+  position: absolute;
+  top: 126px;
+  left: 16px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 286px;
+  height: 157px;
+  padding: 18px 20px;
+  background-image: url("./images/bg-card-front.png");
+  background-size: cover;
+  border-radius: 8px;
+  color: white;
+}
+
+.card-logo {
+  width: 54px;
+}
+
+.card-number {
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.5625rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card-back {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  width: 286px;
+  height: 157px;
+  background-image: url("./images/bg-card-back.png");
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.card-cvc {
+  position: absolute;
+  top: 70px;
+  right: 36px;
+  font-size: 0.5625rem;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.form-section {
+  padding: 91px 24px 45px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 381px;
+  margin: 0 auto;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 16px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.125rem;
+  color: #21092F;
+  border: 1px solid #DFDEE0;
+  border-radius: 8px;
+}
+
+.form-input::placeholder {
+  color: #ACB4BE;
+}
+
+.form-input:focus-visible {
+  outline: none;
+  border-color: transparent;
+  background: linear-gradient(white, white) padding-box, linear-gradient(#6448FE, #600594) border-box;
+}
+
+.form-input.error {
+  border-color: #FF5252;
+}
+
+.error-message {
+  display: none;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #FF5252;
+}
+
+.form-row {
+  display: flex;
+  gap: 11px;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.date-input {
+  width: 72px;
+}
+
+.cvc-group {
+  flex: 1;
+}
+
+.btn-confirm,
+.btn-continue {
+  width: 100%;
+  padding: 15px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.125rem;
+  color: white;
+  background-color: #21092F;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-confirm {
+  margin-top: 8px;
+}
+
+.btn-confirm:hover,
+.btn-continue:hover {
+  background-color: #3F2350;
+  cursor: pointer;
+}
+
+.btn-confirm:focus-visible,
+.btn-continue:focus-visible {
+  outline: 3px solid #6448FE;
+  outline-offset: 3px;
+}
+
+.complete {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 381px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.complete.active {
+  display: flex;
+}
+
+.complete-icon {
+  width: 80px;
+}
+
+.complete-title {
+  margin: 35px 0 16px;
+  font-size: 1.75rem;
+  letter-spacing: 3.4px;
+  text-transform: uppercase;
+}
+
+.complete-text {
+  margin-bottom: 48px;
+  color: #ACB4BE;
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+  }
+
+  .cards {
+    flex-shrink: 0;
+    width: 483px;
+    height: auto;
+    min-height: 100vh;
+    background-image: url("./images/bg-main-desktop.png");
+  }
+
+  .card-front {
+    top: 187px;
+    left: 164px;
+    width: 447px;
+    height: 245px;
+    padding: 28px 32px;
+  }
+
+  .card-logo {
+    width: 84px;
+  }
+
+  .card-number {
+    font-size: 1.75rem;
+    letter-spacing: 3.4px;
+  }
+
+  .card-info {
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+  }
+
+  .card-back {
+    top: 469px;
+    left: 258px;
+    right: auto;
+    width: 447px;
+    height: 245px;
+  }
+
+  .card-cvc {
+    top: 111px;
+    right: 57px;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0 24px 0 128px;
+  }
+
+  .form {
+    gap: 26px;
+  }
+
+  .form-row {
+    gap: 20px;
+  }
+
+  .date-input {
+    width: 80px;
+  }
+
+  .btn-confirm {
+    margin-top: 14px;
+  }
+}
